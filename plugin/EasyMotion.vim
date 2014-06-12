@@ -275,6 +275,15 @@ noremap  <silent><Plug>(easymotion-prev-in-dir)
     \      :<C-u>call EasyMotion#NextPreviousInDir(0,1)<CR>
 xnoremap <silent><Plug>(easymotion-prev-in-dir)
     \      :<C-u>call EasyMotion#NextPreviousInDir(1,1)<CR>
+noremap  <silent><Plug>(easymotion-flash-next-in-dir)
+    \      :<C-u>call EasyMotion#FlashNextPreviousInDir(0,0)<CR>
+xnoremap <silent><Plug>(easymotion-flash-next-in-dir)
+    \      :<C-u>call EasyMotion#FlashNextPreviousInDir(1,0)<CR>
+
+noremap  <silent><Plug>(easymotion-flash-prev-in-dir)
+    \      :<C-u>call EasyMotion#FlashNextPreviousInDir(0,1)<CR>
+xnoremap <silent><Plug>(easymotion-flash-prev-in-dir)
+    \      :<C-u>call EasyMotion#FlashNextPreviousInDir(1,1)<CR>
 "}}}
 "}}}
 

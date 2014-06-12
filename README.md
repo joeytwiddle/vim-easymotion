@@ -271,8 +271,8 @@ map f <Plug>(easymotion-flash-f)
 map F <Plug>(easymotion-flash-F)
 map t <Plug>(easymotion-flash-t)
 map T <Plug>(easymotion-flash-T)
-map ; <Plug>(easymotion-next-in-dir)
-map , <Plug>(easymotion-prev-in-dir)
+map ; <Plug>(easymotion-flash-next-in-dir)
+map , <Plug>(easymotion-flash-prev-in-dir)
 ```
 
 Note: Because `;` is now mapped to `(easymotion-next-in-dir)`, if you perform a different easymotion then using `;` afterwards will repeat that easymotion (not your previous `f` or `t` motion like Vim would usually do).  But if the easymotion you performed was bi-directional, the direction of your last `f` or `t` will still be used!

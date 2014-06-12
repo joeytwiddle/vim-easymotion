@@ -408,6 +408,10 @@ function! EasyMotion#NextPreviousInDir(visualmode, direction) " {{{
     let use_direction = previous_direction == 1 ? 1-a:direction : a:direction
     return EasyMotion#NextPrevious(a:visualmode, use_direction)
 endfunction
+function! EasyMotion#FlashNextPreviousInDir(visualmode, direction) " {{{
+    let s:flag.flash = 1
+    return EasyMotion#NextPreviousInDir(a:visualmode, a:direction)
+endfunction
 " }}}
 " Helper Functions: {{{
 " -- Message -----------------------------
