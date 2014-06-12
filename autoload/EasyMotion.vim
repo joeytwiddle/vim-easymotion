@@ -404,11 +404,9 @@ function! EasyMotion#NextPrevious(visualmode, direction) " {{{
 endfunction " }}}
 function! EasyMotion#NextPreviousInDir(visualmode, direction) " {{{
     let previous_direction = get(s:previous, 'direction', 0)
-    if previous_direction == 1 " backward
-        return EasyMotion#NextPrevious(a:visualmode, 1-a:direction)
-    else
-        return EasyMotion#NextPrevious(a:visualmode, a:direction)
-    endif
+    " If previous direction was backwards, reverse requested direction
+    let use_direction = previous_direction == 1 ? 1-a:direction : a:direction
+    return EasyMotion#NextPrevious(a:visualmode, use_direction)
 endfunction
 " }}}
 " Helper Functions: {{{
